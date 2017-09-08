@@ -29,6 +29,9 @@ const lazyLoad = (service) => (options) => {
         if (params.Version === undefined) {
           params.Version = settings.version;
         }
+        if (params.api) {
+          settings.api = params.api;
+        }
         return request(settings.api, params);
       }
   });
